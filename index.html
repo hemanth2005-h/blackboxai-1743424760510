@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real or Fake</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-gray-800 min-h-screen">
+    <div class="container mx-auto px-4 py-16">
+        <!-- Title -->
+        <h1 class="text-4xl font-extrabold text-white mb-8 text-center uppercase tracking-wider gradient-text">
+            Real or Fake
+            <i class="fas fa-newspaper ml-2 text-blue-500"></i>
+        </h1>
+        <p class="text-lg text-gray-400 text-center mb-12">
+            Verify authenticity with AI-powered analysis
+            <i class="fas fa-magic ml-2 animate-bounce-slow"></i>
+        </p>
+
+        <!-- Search Bar -->
+        <div class="search-container flex justify-center items-center h-64">
+            <div class="search-bar relative w-full max-w-2xl">
+                <input 
+                    type="text" 
+                    placeholder="Search anything..."
+                    class="search-input w-full px-6 py-4 rounded-full bg-transparent text-white text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 shadow-lg border border-gray-700"
+                >
+                <button class="search-btn absolute right-4 top-1/2 transform -translate-y-1/2 text-white p-3 rounded-full transition-all duration-200">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Upload Button -->
+        <div class="upload-container fixed bottom-8 right-8">
+            <div class="upload-btn bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center cursor-pointer shadow-xl">
+                <i class="fas fa-plus"></i>
+            </div>
+            <input type="file" id="fileInput" class="hidden" accept="image/*, .pdf, .doc, .docx" multiple>
+        </div>
+
+        <!-- Preview Section -->
+        <div class="preview-container fixed bottom-0 left-0 w-full p-4 hidden">
+            <div class="max-w-4xl mx-auto bg-gray-800 rounded-lg p-4 shadow-xl">
+                <img id="preview" class="max-h-64 w-auto mx-auto rounded-lg" src="#" alt="Preview">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
